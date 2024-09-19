@@ -1,0 +1,14 @@
+:root{
+    --cor-fundo:#FFC0CB ;
+    --cor-principal:#FF1493 ;
+    --cor-segundaria:#FF69B4 ;
+    --cor-destaque:#C71585 ;
+    --cor-texto:#000000 ;
+}    
+body{
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    
+
+}

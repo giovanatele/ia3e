@@ -5,16 +5,16 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [//abre a lista de objetos (itens)
     {//abre o item
-        enunciado:"Pergunta 1",
-        alternativas:["Alternativa 1","Alternativa 2"]
+        enunciado:"Você gosta de inteligencia artificial?",
+        alternativas:["sim","não"]
     },
     {
-        enunciado:"Pergunta 2",
-        alternativas:["Alternativa 1","Alternativa 2"]
+        enunciado:"Você ultiliza muito a internet?",
+        alternativas:["sim","não"]
     },
     {
-        enunciado:"Pergunta 3",
-        alternativas:["Alternativa 1","Alternativa 2"]
+        enunciado:"Você tem acesso a internet?",
+        alternativas:["sim","não"]
     }
 ]
 let posicao = 0;
@@ -30,5 +30,6 @@ function mostraAlternativa()}
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa;
         caixaAlternativa.appendChild(botaoAlternativas);
-    
+    }    
 }
+mostraPergunta();
