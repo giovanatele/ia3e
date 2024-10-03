@@ -5,31 +5,54 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [//abre a lista de objetos (itens)
     {//abre o item
-        enunciado:"Você gosta de inteligencia artificial?",
-        alternativas:["sim","não"]
+        enunciado: "Você gosta de inteligencia artificial?",
+        alternativas: [{
+            texto: "sim",
+            afirmação: "afirmação da alternativa 1"
+        }, {
+            texto: "não",
+            afirmação: "afirmação da alternativa 2"
+        }
+        ]
     },
     {
-        enunciado:"Você ultiliza muito a internet?",
-        alternativas:["sim","não"]
+        enunciado: "Você ultiliza muito a internet?",
+        alternativas: [{
+            texto: "sim",
+            afirmação: "afirmação da alternativa 1"
+        }, {
+            texto: "não",
+            afirmação: "afirmação da alternativa 2"
+        }
+
+        ]
     },
     {
-        enunciado:"Você tem acesso a internet?",
-        alternativas:["sim","não"]
+        enunciado: "Você tem acesso a internet?",
+        alternativas: [{
+            texto: "sim",
+            afirmação: "afirmação da alternativa 1"
+        }, {
+            texto: "não",
+            afirmação: "afirmação da alternativa 2"
+        }]
     }
 ]
 let posicao = 0;
 let perguntaAtual;
 
-function mostraPergunta(){
+function mostraPergunta() {
     perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
-    mostraAlternativa();{
+    mostraAlternativa();
+}
 
-function mostraAlternativa()}
-   for (const alternativa of perguntaAtua.alternativa){
+function mostraAlternativa() {
+
+    for (const alternativa of perguntaAtual.alternativa) {
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa;
         caixaAlternativa.appendChild(botaoAlternativas);
-    }    
+    }
 }
 mostraPergunta();
