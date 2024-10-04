@@ -8,10 +8,10 @@ const perguntas = [//abre a lista de objetos (itens)
         enunciado: "Você gosta de inteligencia artificial?",
         alternativas: [{
             texto: "sim",
-            afirmação: "afirmação da alternativa 1"
+            afirmacao: "afirmacao da alternativa 1"
         }, {
             texto: "não",
-            afirmação: "afirmação da alternativa 2"
+            afirmacao: "afirmacao da alternativa 2"
         }
         ]
     },
@@ -19,10 +19,10 @@ const perguntas = [//abre a lista de objetos (itens)
         enunciado: "Você ultiliza muito a internet?",
         alternativas: [{
             texto: "sim",
-            afirmação: "afirmação da alternativa 1"
+            afirmacao: "afirmacao da alternativa 1"
         }, {
             texto: "não",
-            afirmação: "afirmação da alternativa 2"
+            afirmacao: "afirmacao da alternativa 2"
         }
 
         ]
@@ -31,28 +31,42 @@ const perguntas = [//abre a lista de objetos (itens)
         enunciado: "Você tem acesso a internet?",
         alternativas: [{
             texto: "sim",
-            afirmação: "afirmação da alternativa 1"
+            afirmacao: "afirmacao da alternativa 1"
         }, {
             texto: "não",
-            afirmação: "afirmação da alternativa 2"
+            afirmacao: "afirmacao da alternativa 2"
         }]
     }
 ]
 let posicao = 0;
 let perguntaAtual;
+let resposta = "";
 
 function mostraPergunta() {
     perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
+    caixaAlternativa.textContent =" ";''
     mostraAlternativa();
 }
 
 function mostraAlternativa() {
-
+    if(posicao>=perguntas.length){
+       mostraResultado();
+       return;
+    }    
     for (const alternativa of perguntaAtual.alternativa) {
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa;
+        botaoAlternativas.addEventListener("click",()=> respostasSelecionadas(alternativa));
         caixaAlternativa.appendChild(botaoAlternativas);
     }
 }
+function respostasSelecionadas(opcaoselecionada){
+    const afirmacao = opcaoselecionada.afirmacao
+    resposta = afirmacao;
+    posicao++;
+    mostraPergunta();
+}    
+function mostraResultado(){
+    caixaPergunta.textContent = "Daqui a 10 anos...";
+}    
 mostraPergunta();
