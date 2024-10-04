@@ -9,6 +9,19 @@ body{
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     display: flex;
-    
-
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
+button{
+    background-color: var(--cor-segundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;    
+    transition: background-color 0.3 ;
+}
+button:hover{
+    background-color:var(--cor-destaque);
+    color: var(--cor-principal);
+}    
