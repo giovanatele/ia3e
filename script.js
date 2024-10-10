@@ -9,9 +9,10 @@ const perguntas = [//abre a lista de objetos (itens)
         alternativas: [{
             texto: "sim",
             afirmacao: "afirmacao da alternativa 1"
-        }, {
+        }, 
+        {
             texto: "não",
-            afirmacao: "afirmacao da alternativa 2"
+            afirmacao: "afirmacao da alternativa"
         }
         ]
     },
@@ -24,7 +25,6 @@ const perguntas = [//abre a lista de objetos (itens)
             texto: "não",
             afirmacao: "afirmacao da alternativa 2"
         }
-
         ]
     },
     {
@@ -32,11 +32,13 @@ const perguntas = [//abre a lista de objetos (itens)
         alternativas: [{
             texto: "sim",
             afirmacao: "afirmacao da alternativa 1"
-        }, {
+        }, 
+        {
             texto: "não",
             afirmacao: "afirmacao da alternativa 2"
-        }]
-    }
+        }
+        ]
+     }
 ]
 let posicao = 0;
 let perguntaAtual;
